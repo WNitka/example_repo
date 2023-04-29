@@ -30,3 +30,16 @@ pole_kolo = pi*r**2
 
 print("Obwod kola wynosi " + str(obwod_kolo) +
       ", zas pole wynisi " + str(pole_kolo) + ".")
+#Trapez
+
+a = 4
+b = 9
+c = 13
+h = 12
+
+
+obwod_trapez = a+b+c+h
+pole_trapez = (a+b)*h*1/2
+
+print("Obwod trapezu wynosi " + str(obwod_trapez) +
+      ", zas pole wynisi " + str(pole_trapez) + ".")
