@@ -43,3 +43,14 @@ pole_trapez = (a+b)*h*1/2
 
 print("Obwod trapezu wynosi " + str(obwod_trapez) +
       ", zas pole wynisi " + str(pole_trapez) + ".")
+
+#Romb
+
+a = 10
+h = 12
+
+obwod_romb = 4*a
+pole_romb = a*h
+
+print("Obwod rombu wynosi " + str(obwod_romb) +
+      ", zas pole wynisi " + str(pole_romb) + ".")
