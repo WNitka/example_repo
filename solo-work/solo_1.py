@@ -35,3 +35,12 @@ for i in studenci:
 # Hello Piotr
 # Hello Tomek
 
+# zadanie 1.5
+
+liczba = 3
+potega = 4
+
+wynik = 3**4
+print(f'Wynik wynosi: {wynik}')
+# oczekiwany rezultat:
+# Wynik wynosi: 81
