@@ -44,3 +44,14 @@ wynik = 3**4
 print(f'Wynik wynosi: {wynik}')
 # oczekiwany rezultat:
 # Wynik wynosi: 81
+
+# zadanie 1.6
+
+# policz ilosc nawiasow ( w danym ciagu znakow
+
+ciag_znakow = "edbw(hdakqas(skqskahb))adwndwb(wgwidn()dsqwhjdw)"
+liczba_nawiasow_otwierajacych = ciag_znakow.count('(')
+
+# oczekiwany rezultat:
+# Liczba nawiasow otwierajacych wynosi: 4
+print(f'Liczba nawiasow otwierajacych wynosi: {liczba_nawiasow_otwierajacych}')
