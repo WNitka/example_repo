@@ -5,7 +5,7 @@ student = "Ola"
 
 # oczekiwany rezultat: Hello Ola
 # wykorzystaj w princie zmienne hello i student
-print (f'{hello} {student}')
+print(f'{hello} {student}')
 
 # zadanie 1.2
 
@@ -59,12 +59,28 @@ print(f'Liczba nawiasow otwierajacych wynosi: {liczba_nawiasow_otwierajacych}')
 # zadanie 1.7
 
 # posortuj alfabetycznie (od imienia) studentow
-studenci = ["Anna Szczesny", "Tomasz Nijaki", "Barbara Kowalska", "Jan Niezbedny"]
+studenci = ["Anna Szczesny", "Tomasz Nijaki",
+            "Barbara Kowalska", "Jan Niezbedny"]
 studenci.sort()
 
 print("Alfabetyczna lista studentow wynosi: ")
 for student in studenci:
     print(student)
 
+# zadanie 1.8
 
+# posortuj alfabetycznie (od nazwiska) studentow
+studenci = ["Anna Szczesny", "Tomasz Nijaki",
+            "Barbara Kowalska", "Jan Niezbedny"]
+
+def sortowaniePoNazwisku(inputList):
+    inputList.sort(key=lambda k: k.split()[-1])
+    return inputList
+   
+
+sortowaniePoNazwisku(studenci)
+
+print("Alfabetyczna lista studentow wynosi: " )
+for student in studenci:
+    print(student)
 
