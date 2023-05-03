@@ -99,3 +99,39 @@ def liczenieStudentow(a):
 liczba_n = liczenieStudentow(studenci)
 
 print(f"Liczba studentow na N wynosi: {liczba_n}")
+
+# zadanie 1.10
+
+wykres_1 = [[2, 4], [4, 4], [6, 4]]
+wykres_2 = [[2, 3], [4, 4], [6, 5]]
+wykres_3 = [[2, 3], [4, 3], [5, 4]]
+
+class wykresLiniowy:
+   def zbadajWykres(self, punkty):
+      (x0, y0), (x1, y1) = punkty[0], punkty[1]
+      for i in range(2, len(punkty)):
+         x, y = punkty[i]
+         if (x0 - x1) * (y1 - y) != (x1 - x) * (y0 - y1):
+            return False
+      return True
+   
+wynik = wykresLiniowy()
+
+wykres_1_funkcja_liniowa = wynik.zbadajWykres(wykres_1)
+wykres_2_funkcja_liniowa = wynik.zbadajWykres(wykres_2)
+wykres_3_funkcja_liniowa = wynik.zbadajWykres(wykres_3)
+
+if wykres_1_funkcja_liniowa:
+    print("Dla punktow w wykres_1 mozna wyznaczyc funkcje liniowa.")
+else:
+    print("Dla punktow w wykres_1 nie mozna wyznaczyc funkcji liniowej.")
+
+if wykres_2_funkcja_liniowa:
+    print("Dla punktow w wykres_2 mozna wyznaczyc funkcje liniowa.")
+else:
+    print("Dla punktow w wykres_2 nie mozna wyznaczyc funkcji liniowej.")
+
+if wykres_3_funkcja_liniowa:
+    print("Dla punktow w wykres_3 mozna wyznaczyc funkcje liniowa.")
+else:
+    print("Dla punktow w wykres_3 nie mozna wyznaczyc funkcji liniowej.")
