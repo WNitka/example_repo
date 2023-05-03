@@ -78,9 +78,24 @@ def sortowaniePoNazwisku(inputList):
     return inputList
    
 
-sortowaniePoNazwisku(studenci)
+posortowani = sortowaniePoNazwisku(studenci)
 
-print("Alfabetyczna lista studentow wynosi: " )
-for student in studenci:
-    print(student)
+print(f"Alfabetyczna lista studentow wynosi: {posortowani}")
 
+
+#zadanie 1.9
+
+# policz wszystkich studentow z tablicy, ktorych nazwisko zaczyna sie na N
+studenci = ["Anna Szczesny", "Tomasz Nijaki", "Barbara Kowalska", "Jan Niezbedny"]
+
+def liczenieStudentow(a):
+    k = []          
+    for student in a:
+        x = student.count("N")
+        k.append(x)
+    return sum(k)
+    
+
+liczba_n = liczenieStudentow(studenci)
+
+print(f"Liczba studentow na N wynosi: {liczba_n}")
