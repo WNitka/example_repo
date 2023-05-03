@@ -1,10 +1,11 @@
 # zadanie 1.1
 
+# oczekiwany rezultat: Hello Ola
+# wykorzystaj w princie zmienne hello i student
+
 hello = "Hello"
 student = "Ola"
 
-# oczekiwany rezultat: Hello Ola
-# wykorzystaj w princie zmienne hello i student
 print(f'{hello} {student}')
 
 # zadanie 1.2
@@ -14,6 +15,9 @@ print(f'{hello} {student}')
 
 # zadanie 1.3
 
+# policz liczbe studentow w tablicy studenci 
+# oczekiwany rezultat: Liczba studentow wynosi: 4
+
 studenci = ["Ania", "Kuba", "Piotr", "Jan"]
 
 liczba_studentów = len(studenci)
@@ -21,11 +25,6 @@ liczba_studentów = len(studenci)
 print(f'Liczba studentów wynosi: {liczba_studentów}')
 
 # zadanie 1.4
-
-studenci = ["Ania", "Kasia", "Piotr", "Tomek"]
-
-for i in studenci:
-    print(f'Hello {i}')
 
 # za pomoca petli i print przywitaj sie z kazdym studentem
 # z tabeli studenci osobno
@@ -35,37 +34,57 @@ for i in studenci:
 # Hello Piotr
 # Hello Tomek
 
+studenci = ["Ania", "Kasia", "Piotr", "Tomek"]
+
+for i in studenci:
+    print(f'Hello {i}')
+
 # zadanie 1.5
+
+# oczekiwany rezultat:
+# Wynik wynosi: 81
 
 liczba = 3
 potega = 4
 
 wynik = 3**4
 print(f'Wynik wynosi: {wynik}')
-# oczekiwany rezultat:
-# Wynik wynosi: 81
+
 
 # zadanie 1.6
 
 # policz ilosc nawiasow ( w danym ciagu znakow
-
+# oczekiwany rezultat:
+# Liczba nawiasow otwierajacych wynosi: 4
 ciag_znakow = "edbw(hdakqas(skqskahb))adwndwb(wgwidn()dsqwhjdw)"
 liczba_nawiasow_otwierajacych = ciag_znakow.count('(')
 
-# oczekiwany rezultat:
-# Liczba nawiasow otwierajacych wynosi: 4
 print(f'Liczba nawiasow otwierajacych wynosi: {liczba_nawiasow_otwierajacych}')
 
 # zadanie 1.7
 
 # posortuj alfabetycznie (od imienia) studentow
+# oczekiwany rezultat:
+# Anna Szczesny
+# Barbara Kowalska
+# Jan Niezbedny
+# Tomasz Nijaki
+
 studenci = ["Anna Szczesny", "Tomasz Nijaki",
             "Barbara Kowalska", "Jan Niezbedny"]
-studenci.sort()
 
-print("Alfabetyczna lista studentow wynosi: ")
-for student in studenci:
-    print(student)
+def sortowaniePoImieniu(inputList):
+    k=[]
+    inputList.sort()
+    for i in inputList:
+        k.append(i)
+    return k
+
+posortowaniImie = sortowaniePoImieniu(studenci)
+
+
+print(f"Alfabetyczna lista studentow wynosi: {posortowaniImie}")
+
 
 # zadanie 1.8
 
@@ -78,9 +97,9 @@ def sortowaniePoNazwisku(inputList):
     return inputList
    
 
-posortowani = sortowaniePoNazwisku(studenci)
+posortowaniNazwisko = sortowaniePoNazwisku(studenci)
 
-print(f"Alfabetyczna lista studentow wynosi: {posortowani}")
+print(f"Alfabetyczna lista studentow wynosi: {posortowaniNazwisko}")
 
 
 #zadanie 1.9
